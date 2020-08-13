@@ -1,0 +1,50 @@
+html,
+body,
+#root {
+	height: 100%;
+}
+#root {
+	display: flex;
+	flex-direction: row;
+}
+.ame-flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.layout-sidebar {
+	flex: 0 0 96px;
+	max-width: 96px;
+	min-width: 96px;
+	width: 96px;
+	color: #fff;
+	background-color: #5764ff;
+	.ame-logo {
+		height: 120px;
+		margin-bottom: 12px;
+	}
+	.ame-menu {
+		height: calc(100% - 144px);
+		text-align: center;
+		.ame-menu-item {
+			background-color: transparent;
+			border-left: 2px solid #6a73ff;
+			padding: 12px 0;
+			margin: 6px 0;
+			cursor: pointer;
+			.menu-item {
+				font-size: 32px;
+			}
+			&:hover {
+				background-color: #6a73ff;
+			}
+		}
+		.menu-actived {
+            border-color: #fff;
+            background-color: #6a73ff;
+		}
+	}
+}
+.layout-pageview {
+	width: calc(100% - 60px);
+}
