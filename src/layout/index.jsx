@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import PageView from "./PageView";
 import SideBar from "./SideBar";
 import "./layout.scss";
@@ -9,9 +9,10 @@ const Router = () => (
 		<Switch>
 			<Route path="/">
 				<SideBar></SideBar>
-                <Route path="/ame">
-                    <PageView></PageView>
-                </Route>
+				<Route path="/ame">
+					<PageView></PageView>
+				</Route>
+				<Redirect to="/dashboard"></Redirect>
 			</Route>
 		</Switch>
 	</HashRouter>
