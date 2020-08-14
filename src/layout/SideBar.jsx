@@ -10,22 +10,23 @@ class SideBar extends React.Component {
 	//  状态的初始化一般放在构造器中
 	constructor(props) {
 		super(props);
-
+		const appName = "ame";
 		this.state = {
 			menus: [
-				{ name: "首页", icon: <DesktopOutlined />, path: "/dashboard" },
-				{ name: "备忘录", icon: <BookOutlined />, path: "/memo" },
-				{ name: "项目", icon: <HddOutlined />, path: "/project" },
-				{ name: "聊天", icon: <CommentOutlined />, path: "/chat" },
-				{ name: "用户", icon: <TeamOutlined />, path: "/users" },
+				{ name: "首页", icon: <DesktopOutlined />, path: `/${appName}/dashboard` },
+				{ name: "备忘录", icon: <BookOutlined />, path: `/${appName}/memo` },
+				{ name: "项目", icon: <HddOutlined />, path: `/${appName}/project` },
+				{ name: "聊天", icon: <CommentOutlined />, path: `/${appName}/chat` },
+				{ name: "用户", icon: <TeamOutlined />, path: `/${appName}/users` },
 			],
 			activeMenu: "首页",
 		};
 	}
 	handleMenuClick = (active) => {
 		const { name, path } = active;
+		const pathname = path;
 		this.props.history.push({
-			pathname: path,
+			pathname,
 		});
 		this.setState({
 			activeMenu: name,
@@ -59,7 +60,7 @@ class SideBar extends React.Component {
 								}
 								onClick={(e) => this.handleMenuClick(data, e)}
 							>
-								<Tooltip placement="right" title={data.name}>
+								<Tooltip placement="left" title={data.name}>
 									<span className="menu-item">{data.icon}</span>
 								</Tooltip>
 							</div>
