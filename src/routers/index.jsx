@@ -1,8 +1,7 @@
 import React from "react";
 import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
-import PageView from "./PageView";
-import SideBar from "./SideBar";
-import "./layout.scss";
+import PageView from "@/layout/PageView";
+import SideBar from "@/layout/SideBar";
 
 const Router = () => (
 	<HashRouter>

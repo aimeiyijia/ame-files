@@ -4,6 +4,8 @@ import { Avatar, Tooltip } from "antd";
 import { DesktopOutlined, BookOutlined, HddOutlined, CommentOutlined, TeamOutlined } from "@ant-design/icons";
 import AmeScrollbars from "@/compontents/AmeScrollbars.jsx";
 
+import "./layout.scss";
+
 class SideBar extends React.Component {
 	//  状态的初始化一般放在构造器中
 	constructor(props) {
