@@ -12,6 +12,12 @@ body,
 	justify-content: center;
 	align-items: center;
 }
+
+.ame-layout {
+	.scroll-bar {
+		height: calc(100% - 144px) !important;
+	}
+}
 .layout-sidebar {
 	flex: 0 0 96px;
 	max-width: 96px;
@@ -24,7 +30,7 @@ body,
 		margin-bottom: 12px;
 	}
 	.ame-menu {
-		height: calc(100% - 144px);
+		// height: calc(100% - 144px);
 		text-align: center;
 		.ame-menu-item {
 			background-color: transparent;
@@ -41,7 +47,7 @@ body,
 			}
 		}
 		.menu-actived {
-            border-color: #fff;
+			border-color: #fff;
 			background-color: #6a73ff;
 			transition: all 200ms;
 		}

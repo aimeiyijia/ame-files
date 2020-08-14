@@ -2,8 +2,7 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import { Avatar, Tooltip } from "antd";
 import { DesktopOutlined, BookOutlined, HddOutlined, CommentOutlined, TeamOutlined } from "@ant-design/icons";
-
-// import { Link } from "react-router-dom";
+import AmeScrollbars from "@/compontents/AmeScrollbars.jsx";
 
 class SideBar extends React.Component {
 	//  状态的初始化一般放在构造器中
@@ -30,6 +29,14 @@ class SideBar extends React.Component {
 			activeMenu: name,
 		});
 	};
+
+	renderThumb({ style, ...props }) {
+		const thumbStyle = {
+			backgroundColor: `rgb(255,255,255,0.2)`,
+			borderRadius: `4px`,
+		};
+		return <div style={{ ...style, ...thumbStyle }} {...props} />;
+	}
 	render() {
 		return (
 			<div className="ame-layout layout-sidebar">
@@ -38,21 +45,25 @@ class SideBar extends React.Component {
 						Ame
 					</Avatar>
 				</div>
-				<div className="ame-menu">
-					{this.state.menus.map((data, index) => (
-						<div
-							key={index}
-							className={
-								this.state.activeMenu === data.name ? "ame-menu-item menu-actived" : "ame-menu-item"
-							}
-							onClick={(e) => this.handleMenuClick(data, e)}
-						>
-							<Tooltip placement="right" title={data.name}>
-								<span className="menu-item">{data.icon}</span>
-							</Tooltip>
-						</div>
-					))}
-				</div>
+				<AmeScrollbars
+					className="scroll-bar" // This will activate auto hide
+				>
+					<div className="ame-menu">
+						{this.state.menus.map((data, index) => (
+							<div
+								key={index}
+								className={
+									this.state.activeMenu === data.name ? "ame-menu-item menu-actived" : "ame-menu-item"
+								}
+								onClick={(e) => this.handleMenuClick(data, e)}
+							>
+								<Tooltip placement="right" title={data.name}>
+									<span className="menu-item">{data.icon}</span>
+								</Tooltip>
+							</div>
+						))}
+					</div>
+				</AmeScrollbars>
 			</div>
 		);
 	}
