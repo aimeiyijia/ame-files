@@ -1,9 +1,8 @@
-import React from "react";
+import React, { Component } from "react";
 
-import "./layout.scss";
-
-export default class PageView extends React.Component {
+class PageView extends Component {
 	render() {
-		return <div className="ame-layout layout-pageview"></div>;
+		return <div className="ame-layout layout-pageview">{this.props.children}</div>;
 	}
 }
+export default PageView;
