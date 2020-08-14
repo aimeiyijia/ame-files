@@ -1,9 +1,8 @@
 import PageView from "@/layout/PageView";
 import SideBar from "@/layout/SideBar";
 
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { renderRoutes } from "react-router-config";
-import { BrowserRouter } from "react-router-dom";
 
 import "./layout.scss";
 
@@ -16,10 +15,10 @@ export default class Layout extends Component {
 	render() {
 		const { routes } = this.props.route;
 		return (
-			<BrowserRouter>
+			<Fragment>
 				<SideBar></SideBar>
 				<PageView>{renderRoutes(routes)}</PageView>
-			</BrowserRouter>
+			</Fragment>
 		);
 	}
 }
