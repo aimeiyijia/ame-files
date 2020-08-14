@@ -14,20 +14,20 @@ body,
 }
 
 .ame-layout {
-	.scroll-bar {
-		height: calc(100% - 144px) !important;
+	.ame-scrollbar {
+		height: calc(100% - 180px) !important;
+		margin: 12px 0;
 	}
 }
 .layout-sidebar {
-	flex: 0 0 96px;
-	max-width: 96px;
-	min-width: 96px;
-	width: 96px;
+	flex: 0 0 84px;
+	max-width: 84px;
+	min-width: 84px;
+	width: 84px;
 	color: #fff;
 	background-color: #5764ff;
 	.ame-logo {
-		height: 120px;
-		margin-bottom: 12px;
+		height: 98px;
 	}
 	.ame-menu {
 		// height: calc(100% - 144px);
@@ -40,7 +40,7 @@ body,
 			cursor: pointer;
 			transition: all 400ms;
 			.menu-item {
-				font-size: 32px;
+				font-size: 24px;
 			}
 			&:hover {
 				background-color: #6a73ff;

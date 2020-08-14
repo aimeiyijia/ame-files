@@ -41,12 +41,12 @@ class SideBar extends React.Component {
 		return (
 			<div className="ame-layout layout-sidebar">
 				<div className="ame-flex ame-logo">
-					<Avatar size={60} style={{ color: "#5764ff", backgroundColor: "#fff" }}>
+					<Avatar size={48} style={{ color: "#5764ff", backgroundColor: "#fff" }}>
 						Ame
 					</Avatar>
 				</div>
 				<AmeScrollbars
-					className="scroll-bar" // This will activate auto hide
+					className="ame-scrollbar" // This will activate auto hide
 				>
 					<div className="ame-menu">
 						{this.state.menus.map((data, index) => (
@@ -64,6 +64,9 @@ class SideBar extends React.Component {
 						))}
 					</div>
 				</AmeScrollbars>
+				<div className="ame-flex ame-person">
+					<Avatar size={40} src={require("@/assets/logo.png")} />
+				</div>
 			</div>
 		);
 	}
