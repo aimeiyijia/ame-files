@@ -1,6 +1,6 @@
 import React from "react";
-import { PlusOutlined } from "@ant-design/icons";
-import { Tree } from "antd";
+import { PlusOutlined, SearchOutlined } from "@ant-design/icons";
+import { Tree, Button } from "antd";
 
 import { Collapse } from "antd";
 
@@ -77,11 +77,7 @@ class Directory extends React.Component {
 				</div>
 				<div className="files">
 					<div className="title">Storage 文件库</div>
-					<Collapse
-						className="site-collapse-custom-collapse"
-						bordered={false}
-						onChange={this.callback}
-					>
+					<Collapse className="site-collapse-custom-collapse" bordered={false} onChange={this.callback}>
 						<Panel className="site-collapse-custom-panel" showArrow={false} header="我的文件" key="1">
 							<Tree
 								checkable
@@ -106,7 +102,9 @@ class Directory extends React.Component {
 				</div>
 				<div className="add-files">
 					<div className="add-btn">
-						<PlusOutlined />
+						<Button type="primary" icon={<SearchOutlined />}>
+							Search
+						</Button>
 					</div>
 				</div>
 			</div>
