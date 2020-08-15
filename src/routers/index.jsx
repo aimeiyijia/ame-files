@@ -1,7 +1,7 @@
 import React from "react";
 import { Redirect } from "react-router";
 import Layout from "@/layout/index.jsx";
-import Dashboard from "@/views/dashboard/Dashboard";
+import Dashboard from "@/views/dashboard/dashboard";
 
 const routes = [
 	{
