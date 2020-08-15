@@ -1,10 +1,8 @@
 import React from "react";
 import { Row, Col } from "antd";
+import Directory from "./modules/Directory";
+import "./dashboard.scss";
 
-// 左侧-目录区
-function Directory() {
-	return <div className="ame-directory">目录区</div>;
-}
 // 中间-项目区
 function Project() {
 	return <div className="ame-project">工程区</div>;
@@ -18,14 +16,14 @@ export default class Dashboard extends React.Component {
 	render() {
 		return (
 			<div className="ame-dashboard">
-				<Row>
-					<Col span={8}>
+				<Row gutter={16}>
+					<Col span={6}>
 						<Directory />
 					</Col>
-					<Col span={8}>
+					<Col span={12}>
 						<Project />
 					</Col>
-					<Col span={8}>
+					<Col span={6}>
 						<Statistics />
 					</Col>
 				</Row>

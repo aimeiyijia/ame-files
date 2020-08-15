@@ -7,10 +7,6 @@ import { renderRoutes } from "react-router-config";
 import "./layout.scss";
 
 export default class Layout extends Component {
-	constructor(props) {
-		super(props);
-		console.log(props);
-	}
 
 	render() {
 		const { routes } = this.props.route;
