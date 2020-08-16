@@ -29,7 +29,7 @@
 	}
 	.files {
 		padding-top: 12px;
-		height: calc(100% - 140px);
+		height: calc(100% - 148px);
 		.ame-scrollbar-files {
 			height: calc(100% - 32px) !important;
 		}
@@ -55,4 +55,5 @@
 
 .ame-project {
 	background-color: #f7f8fc;
+	padding: 24px 16px;
 }
