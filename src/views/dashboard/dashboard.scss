@@ -17,6 +17,7 @@
 	.title {
 		font-size: 18px;
 		color: #364064;
+		padding: 2px 0;
 	}
 
 	.navigation {
@@ -28,6 +29,10 @@
 	}
 	.files {
 		padding-top: 12px;
+		height: calc(100% - 140px);
+		.ame-scrollbar-files {
+			height: calc(100% - 32px) !important;
+		}
 	}
 	.ant-collapse-borderless {
 		background-color: transparent;
@@ -35,12 +40,15 @@
 
 	[data-theme="compact"] .site-collapse-custom-collapse .site-collapse-custom-panel,
 	.site-collapse-custom-collapse .site-collapse-custom-panel {
-		background: transparent;
+		border: 0px;
 	}
 
 	.ant-collapse-content > .ant-collapse-content-box {
-		padding-left: 32px;
+		padding-left: 20px;
 	}
-	.add-files {
+	.panel-active {
+		.ant-collapse-header {
+			color: #5862fa !important;
+		}
 	}
 }

@@ -1,9 +1,5 @@
 const path = require("path");
-const {
-	override,
-	addWebpackAlias,
-	addLessLoader,
-} = require("customize-cra");
+const { override, addWebpackAlias, addLessLoader } = require("customize-cra");
 
 function resolve(dir) {
 	return path.join(__dirname, ".", dir);
@@ -17,6 +13,7 @@ module.exports = override(
 		lessOptions: {
 			modifyVars: {
 				"@primary-color": "#5764ff",
+				"@border-radius-base": "4px",
 			},
 			javascriptEnabled: true,
 		},
