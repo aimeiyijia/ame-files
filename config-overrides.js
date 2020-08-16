@@ -1,18 +1,24 @@
 const path = require("path");
+const {
+	override,
+	addWebpackAlias,
+	addLessLoader,
+} = require("customize-cra");
 
 function resolve(dir) {
 	return path.join(__dirname, ".", dir);
 }
 
-/* config-overrides.js */
-module.exports = function override(config, env) {
-	//do stuff with the webpack config...
-	// alias
-	config.resolve.alias = {
-        ...config.resolve.alias,
-		"@": resolve("src"),
-		"@components": resolve("src/components"),
-		"@page": resolve("src/page"),
-	};
-	return config;
-};
+module.exports = override(
+	addWebpackAlias({
+		["@"]: resolve("src"),
+	}),
+	addLessLoader({
+		lessOptions: {
+			modifyVars: {
+				"@primary-color": "#5764ff",
+			},
+			javascriptEnabled: true,
+		},
+	})
+);
