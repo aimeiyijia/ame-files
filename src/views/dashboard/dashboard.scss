@@ -9,13 +9,13 @@
 .ame-project,
 .ame-statistics {
 	height: 100%;
-	border: 1px solid red;
+	// border: 1px solid red;
 }
 .ame-directory {
 	padding-left: 24px;
 	padding-right: 24px;
 	.title {
-		font-size: 18px;
+		font-size: 20px;
 		color: #364064;
 		padding: 2px 0;
 	}
@@ -51,4 +51,8 @@
 			color: #5862fa !important;
 		}
 	}
+}
+
+.ame-project {
+	background-color: #f7f8fc;
 }

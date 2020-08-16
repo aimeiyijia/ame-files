@@ -1,12 +1,9 @@
 import React from "react";
 import { Row, Col } from "antd";
 import Directory from "./modules/Directory";
+import Project from "./modules/Project";
 import "./dashboard.scss";
 
-// 中间-项目区
-function Project() {
-	return <div className="ame-project">工程区</div>;
-}
 // 右侧-统计区
 function Statistics() {
 	return <div className="ame-statistics">统计区</div>;

@@ -161,8 +161,8 @@ class Directory extends React.Component {
 				</div>
 				<div className="add-files">
 					<div className="add-btn">
-						<Button block type="primary" size="large" icon={<SearchOutlined />}>
-							Search
+						<Button block type="primary" size="large" icon={<PlusOutlined />}>
+							新增
 						</Button>
 					</div>
 				</div>
