@@ -1,6 +1,14 @@
 import React from "react";
-import { Input, Row, Col, Avatar, Tooltip } from "antd";
-import { SearchOutlined, UserOutlined, AntDesignOutlined } from "@ant-design/icons";
+import { Input, Row, Col, Avatar, Tooltip, Progress, Tag } from "antd";
+import {
+	SearchOutlined,
+	UserOutlined,
+	AntDesignOutlined,
+	TwitterOutlined,
+	YoutubeOutlined,
+	FacebookOutlined,
+	LinkedinOutlined,
+} from "@ant-design/icons";
 
 class Project extends React.Component {
 	render() {
@@ -11,13 +19,13 @@ class Project extends React.Component {
 				</div>
 				<div className="project-view">
 					<div className="title">项目预览</div>
-					<Row>
-						<Col span={8}>
+					<Row gutter={16}>
+						<Col xs={2} sm={4} md={6} lg={8} xl={12}>
 							<div className="single-project">
-								<div>
+								<div className="desc">
 									<div>
 										<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-										<span>项目名称</span>
+										<div>项目名称</div>
 									</div>
 									<Avatar.Group
 										maxCount={2}
@@ -31,10 +39,169 @@ class Project extends React.Component {
 										<Avatar style={{ backgroundColor: "#1890ff" }} icon={<AntDesignOutlined />} />
 									</Avatar.Group>
 								</div>
+								<div className="project-tags">
+									<Tag icon={<TwitterOutlined />} color="#55acee">
+										Twitter
+									</Tag>
+									<Tag icon={<YoutubeOutlined />} color="#cd201f">
+										Youtube
+									</Tag>
+									<Tag icon={<FacebookOutlined />} color="#3b5999">
+										Facebook
+									</Tag>
+									<Tag icon={<LinkedinOutlined />} color="#55acee">
+										LinkedIn
+									</Tag>
+								</div>
+								<div className="progress">
+									<Progress
+										strokeColor={{
+											from: "#638ff6",
+											to: "#87d068",
+										}}
+										percent={99.9}
+										status="active"
+									/>
+								</div>
 							</div>
 						</Col>
-						<Col span={8}>col-8</Col>
-						<Col span={8}>col-8</Col>
+						<Col xs={2} sm={4} md={6} lg={8} xl={12}>
+							<div className="single-project">
+								<div className="desc">
+									<div>
+										<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+										<div>项目名称</div>
+									</div>
+									<Avatar.Group
+										maxCount={2}
+										maxStyle={{ color: "#f56a00", backgroundColor: "#fde3cf" }}
+									>
+										<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+										<Avatar style={{ backgroundColor: "#f56a00" }}>K</Avatar>
+										<Tooltip title="Ant User" placement="top">
+											<Avatar style={{ backgroundColor: "#87d068" }} icon={<UserOutlined />} />
+										</Tooltip>
+										<Avatar style={{ backgroundColor: "#1890ff" }} icon={<AntDesignOutlined />} />
+									</Avatar.Group>
+								</div>
+								<div className="project-tags">
+									<Tag icon={<TwitterOutlined />} color="#55acee">
+										Twitter
+									</Tag>
+									<Tag icon={<YoutubeOutlined />} color="#cd201f">
+										Youtube
+									</Tag>
+									<Tag icon={<FacebookOutlined />} color="#3b5999">
+										Facebook
+									</Tag>
+									<Tag icon={<LinkedinOutlined />} color="#55acee">
+										LinkedIn
+									</Tag>
+								</div>
+								<div className="progress">
+									<Progress
+										strokeColor={{
+											from: "#638ff6",
+											to: "#87d068",
+										}}
+										percent={99.9}
+										status="active"
+									/>
+								</div>
+							</div>
+						</Col>
+					</Row>
+					<Row gutter={16}>
+						<Col xs={2} sm={4} md={6} lg={8} xl={12}>
+							<div className="single-project">
+								<div className="desc">
+									<div>
+										<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+										<div>项目名称</div>
+									</div>
+									<Avatar.Group
+										maxCount={2}
+										maxStyle={{ color: "#f56a00", backgroundColor: "#fde3cf" }}
+									>
+										<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+										<Avatar style={{ backgroundColor: "#f56a00" }}>K</Avatar>
+										<Tooltip title="Ant User" placement="top">
+											<Avatar style={{ backgroundColor: "#87d068" }} icon={<UserOutlined />} />
+										</Tooltip>
+										<Avatar style={{ backgroundColor: "#1890ff" }} icon={<AntDesignOutlined />} />
+									</Avatar.Group>
+								</div>
+								<div className="project-tags">
+									<Tag icon={<TwitterOutlined />} color="#55acee">
+										Twitter
+									</Tag>
+									<Tag icon={<YoutubeOutlined />} color="#cd201f">
+										Youtube
+									</Tag>
+									<Tag icon={<FacebookOutlined />} color="#3b5999">
+										Facebook
+									</Tag>
+									<Tag icon={<LinkedinOutlined />} color="#55acee">
+										LinkedIn
+									</Tag>
+								</div>
+								<div className="progress">
+									<Progress
+										strokeColor={{
+											from: "#638ff6",
+											to: "#87d068",
+										}}
+										percent={99.9}
+										status="active"
+									/>
+								</div>
+							</div>
+						</Col>
+						<Col xs={2} sm={4} md={6} lg={8} xl={12}>
+							<div className="single-project">
+								<div className="desc">
+									<div>
+										<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+										<div>项目名称</div>
+									</div>
+									<Avatar.Group
+										maxCount={2}
+										maxStyle={{ color: "#f56a00", backgroundColor: "#fde3cf" }}
+									>
+										<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+										<Avatar style={{ backgroundColor: "#f56a00" }}>K</Avatar>
+										<Tooltip title="Ant User" placement="top">
+											<Avatar style={{ backgroundColor: "#87d068" }} icon={<UserOutlined />} />
+										</Tooltip>
+										<Avatar style={{ backgroundColor: "#1890ff" }} icon={<AntDesignOutlined />} />
+									</Avatar.Group>
+								</div>
+								<div className="project-tags">
+									<Tag icon={<TwitterOutlined />} color="#55acee">
+										Twitter
+									</Tag>
+									<Tag icon={<YoutubeOutlined />} color="#cd201f">
+										Youtube
+									</Tag>
+									<Tag icon={<FacebookOutlined />} color="#3b5999">
+										Facebook
+									</Tag>
+									<Tag icon={<LinkedinOutlined />} color="#55acee">
+										LinkedIn
+									</Tag>
+								</div>
+								<div className="progress">
+									<Progress
+										strokeColor={{
+											from: "#638ff6",
+											to: "#87d068",
+										}}
+										percent={99.9}
+										status="active"
+									/>
+								</div>
+							</div>
+						</Col>
 					</Row>
 				</div>
 				<div className="recent">
