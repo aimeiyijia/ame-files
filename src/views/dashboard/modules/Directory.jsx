@@ -78,7 +78,6 @@ class Directory extends React.Component {
 	};
 
 	callback = (key) => {
-		console.log(key);
 		this.setState({
 			activePanel: key,
 		});
