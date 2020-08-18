@@ -13,7 +13,7 @@ export default class Dashboard extends React.Component {
 	render() {
 		return (
 			<div className="ame-dashboard">
-				<Row gutter={16}>
+				<Row gutter={16} className="dashboard-row">
 					<Col span={6}>
 						<Directory />
 					</Col>
