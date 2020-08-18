@@ -1,5 +1,5 @@
 import React from "react";
-import { Input, Row, Col, Avatar, Tooltip, Progress, Tag, List } from "antd";
+import { Input, Row, Col, Avatar, Tooltip, Progress, Tag, List, Statistic } from "antd";
 import AmeScrollbars from "@/compontents/AmeScrollbars.jsx";
 import {
 	SearchOutlined,
@@ -9,26 +9,30 @@ import {
 	YoutubeOutlined,
 	FacebookOutlined,
 	LinkedinOutlined,
+	MoreOutlined,
 } from "@ant-design/icons";
+
+const { Countdown } = Statistic;
+const deadline = Date.now() + 1000 * 60 * 60 * 24 * 2 + 1000 * 30;
 
 const data = [
 	{
-		title: "Ant Design Title 1",
+		title: "删除",
 	},
 	{
-		title: "Ant Design Title 2",
+		title: "新增",
 	},
 	{
-		title: "Ant Design Title 3",
+		title: "增加",
 	},
 	{
-		title: "Ant Design Title 4",
+		title: "更新",
 	},
 	{
-		title: "Ant Design Title 5",
+		title: "增加",
 	},
 	{
-		title: "Ant Design Title 6",
+		title: "增加",
 	},
 ];
 class Project extends React.Component {
@@ -45,10 +49,7 @@ class Project extends React.Component {
 							<Col xs={2} sm={4} md={6} lg={8} xl={12}>
 								<div className="single-project">
 									<div className="desc">
-										<div>
-											<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-											<div>项目名称</div>
-										</div>
+										<div className="project-name">项目名称</div>
 										<Avatar.Group
 											maxCount={2}
 											maxStyle={{ color: "#f56a00", backgroundColor: "#fde3cf" }}
@@ -74,13 +75,9 @@ class Project extends React.Component {
 										<Tag icon={<YoutubeOutlined />} color="#cd201f">
 											Youtube
 										</Tag>
-										<Tag icon={<FacebookOutlined />} color="#3b5999">
-											Facebook
-										</Tag>
-										<Tag icon={<LinkedinOutlined />} color="#55acee">
-											LinkedIn
-										</Tag>
 									</div>
+									<Countdown title="Day Level" value={deadline} format="D 天 H 时 m 分 s 秒" />
+
 									<div className="progress">
 										<Progress
 											strokeColor={{
@@ -96,10 +93,7 @@ class Project extends React.Component {
 							<Col xs={2} sm={4} md={6} lg={8} xl={12}>
 								<div className="single-project">
 									<div className="desc">
-										<div>
-											<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-											<div>项目名称</div>
-										</div>
+										<div>项目名称</div>
 										<Avatar.Group
 											maxCount={2}
 											maxStyle={{ color: "#f56a00", backgroundColor: "#fde3cf" }}
@@ -125,13 +119,8 @@ class Project extends React.Component {
 										<Tag icon={<YoutubeOutlined />} color="#cd201f">
 											Youtube
 										</Tag>
-										<Tag icon={<FacebookOutlined />} color="#3b5999">
-											Facebook
-										</Tag>
-										<Tag icon={<LinkedinOutlined />} color="#55acee">
-											LinkedIn
-										</Tag>
 									</div>
+									<Countdown title="Day Level" value={deadline} format="D 天 H 时 m 分 s 秒" />
 									<div className="progress">
 										<Progress
 											strokeColor={{
@@ -149,10 +138,7 @@ class Project extends React.Component {
 							<Col xs={2} sm={4} md={6} lg={8} xl={12}>
 								<div className="single-project">
 									<div className="desc">
-										<div>
-											<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-											<div>项目名称</div>
-										</div>
+										<div>项目名称</div>
 										<Avatar.Group
 											maxCount={2}
 											maxStyle={{ color: "#f56a00", backgroundColor: "#fde3cf" }}
@@ -178,13 +164,9 @@ class Project extends React.Component {
 										<Tag icon={<YoutubeOutlined />} color="#cd201f">
 											Youtube
 										</Tag>
-										<Tag icon={<FacebookOutlined />} color="#3b5999">
-											Facebook
-										</Tag>
-										<Tag icon={<LinkedinOutlined />} color="#55acee">
-											LinkedIn
-										</Tag>
 									</div>
+									<Countdown title="Day Level" value={deadline} format="D 天 H 时 m 分 s 秒" />
+
 									<div className="progress">
 										<Progress
 											strokeColor={{
@@ -200,10 +182,7 @@ class Project extends React.Component {
 							<Col xs={2} sm={4} md={6} lg={8} xl={12}>
 								<div className="single-project">
 									<div className="desc">
-										<div>
-											<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-											<div>项目名称</div>
-										</div>
+										<div>项目名称</div>
 										<Avatar.Group
 											maxCount={2}
 											maxStyle={{ color: "#f56a00", backgroundColor: "#fde3cf" }}
@@ -229,13 +208,9 @@ class Project extends React.Component {
 										<Tag icon={<YoutubeOutlined />} color="#cd201f">
 											Youtube
 										</Tag>
-										<Tag icon={<FacebookOutlined />} color="#3b5999">
-											Facebook
-										</Tag>
-										<Tag icon={<LinkedinOutlined />} color="#55acee">
-											LinkedIn
-										</Tag>
 									</div>
+									<Countdown title="Day Level" value={deadline} format="D 天 H 时 m 分 s 秒" />
+
 									<div className="progress">
 										<Progress
 											strokeColor={{
@@ -258,14 +233,21 @@ class Project extends React.Component {
 							itemLayout="horizontal"
 							dataSource={data}
 							renderItem={(item) => (
-								<List.Item>
+								<List.Item
+									actions={[
+										<a key="list-loadmore-more">
+											<MoreOutlined rotate={90} />
+										</a>,
+									]}
+								>
 									<List.Item.Meta
 										avatar={
 											<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
 										}
 										title={<a href="https://ant.design">{item.title}</a>}
-										description="Ant Design, a design language for background applications, is refined by Ant UED Team"
+										description="某项目某文件"
 									/>
+									<div>日期</div>
 								</List.Item>
 							)}
 						/>
