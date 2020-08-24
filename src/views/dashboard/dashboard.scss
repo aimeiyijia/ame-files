@@ -21,8 +21,8 @@
 	padding: 2px 0;
 }
 .ame-directory {
-	padding-left: 24px;
-	padding-right: 24px;
+	padding-left: 16px;
+	padding-right: 12px;
 
 	.navigation {
 		height: 90px;
@@ -35,7 +35,7 @@
 		padding-top: 12px;
 		height: calc(100% - 148px);
 		.ame-scrollbar-files {
-			height: calc(100% - 32px) !important;
+			height: calc(100% - 42px) !important;
 		}
 	}
 	.ant-collapse-borderless {
@@ -49,6 +49,7 @@
 
 	.ant-collapse-content > .ant-collapse-content-box {
 		padding-left: 20px;
+		padding-right: 0px;
 	}
 	.panel-active {
 		.ant-collapse-header {

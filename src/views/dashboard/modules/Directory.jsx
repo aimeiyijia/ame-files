@@ -1,5 +1,5 @@
 import React from "react";
-import { PlusOutlined, SearchOutlined, SmileOutlined } from "@ant-design/icons";
+import { PlusOutlined, SmileOutlined } from "@ant-design/icons";
 import AmeScrollbars from "@/compontents/AmeScrollbars.jsx";
 import { Tree, Button, Input, Collapse } from "antd";
 
