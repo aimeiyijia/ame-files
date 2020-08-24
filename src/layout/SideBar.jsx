@@ -10,13 +10,13 @@ class SideBar extends React.Component {
 		const appName = "ame";
 		this.state = {
 			menus: [
-				{ id: "dashboard", name: "文件", icon: <FileSearchOutlined />, path: `/${appName}/dashboard` },
+				{ id: "files", name: "文件", icon: <FileSearchOutlined />, path: `/${appName}/files` },
 				{ id: "memo", name: "备忘录", icon: <BookOutlined />, path: `/${appName}/memo` },
 				{ id: "project", name: "项目", icon: <HddOutlined />, path: `/${appName}/project` },
 				{ id: "chat", name: "聊天", icon: <CommentOutlined />, path: `/${appName}/chat` },
 				{ id: "users", name: "用户", icon: <TeamOutlined />, path: `/${appName}/users` },
 			],
-			activeMenu: "dashboard",
+			activeMenu: "file",
 		};
 	}
 	componentDidMount() {

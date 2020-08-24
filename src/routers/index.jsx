@@ -1,7 +1,5 @@
-import React from "react";
-import { Redirect } from "react-router";
 import Layout from "@/layout/index.jsx";
-import Dashboard from "@/views/dashboard/dashboard";
+import Files from "@/views/files/index";
 import Project from "@/views/project/project";
 
 const routes = [
@@ -9,7 +7,7 @@ const routes = [
 		path: "/ame",
 		component: Layout,
 		routes: [
-			{ path: "/ame/dashboard", component: Dashboard },
+			{ path: "/ame/files", component: Files },
 			{ path: "/ame/project", component: Project },
 		],
 	},

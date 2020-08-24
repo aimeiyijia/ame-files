@@ -1,9 +1,9 @@
 import React from "react";
 import { Row, Col } from "antd";
 import Directory from "./modules/Directory";
-import "./dashboard.scss";
+import "./index.scss";
 
-export default class Dashboard extends React.Component {
+export default class Files extends React.Component {
 	render() {
 		return (
 			<div className="ame-dashboard">
