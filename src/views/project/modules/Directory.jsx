@@ -23,7 +23,7 @@ class Directory extends React.Component {
 							key: "0-0-0",
 							children: [
 								{
-									title: "超长超长超长超长超长字符串测试",
+									title: "音频一",
 									key: "0-0-0-0",
 								},
 								{
