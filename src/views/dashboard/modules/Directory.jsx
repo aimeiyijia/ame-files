@@ -1,5 +1,5 @@
 import React from "react";
-import { PlusOutlined, SearchOutlined } from "@ant-design/icons";
+import { PlusOutlined, SearchOutlined, SmileOutlined } from "@ant-design/icons";
 import AmeScrollbars from "@/compontents/AmeScrollbars.jsx";
 import { Tree, Button, Input, Collapse } from "antd";
 
@@ -21,6 +21,7 @@ class Directory extends React.Component {
 						{
 							title: "音视频文件",
 							key: "0-0-0",
+							icon: <SmileOutlined />,
 							children: [
 								{
 									title: "超长超长超长超长超长字符串测试",
@@ -73,8 +74,8 @@ class Directory extends React.Component {
 		console.log("selected", selectedKeys, info);
 	};
 
-	onCheck = (checkedKeys, info) => {
-		console.log("onCheck", checkedKeys, info);
+	treeRightClick = (checkedKeys) => {
+		console.log("右键", checkedKeys);
 	};
 
 	callback = (key) => {
@@ -105,13 +106,13 @@ class Directory extends React.Component {
 								key="1"
 								className={this.state.activePanel.includes("1") ? "panel-active" : ""}
 							>
-								<Search style={{ marginBottom: 8 }} placeholder="Search" />
+								<Search style={{ marginBottom: 8 }} placeholder="输入关键字搜索" />
 								<Tree
-									checkable
+									showIcon
 									defaultExpandedKeys={["0-0-0", "0-0-1", "0-0-2"]}
 									onSelect={this.onSelect}
-									onCheck={this.onCheck}
 									treeData={this.state.treeData}
+									onRightClick={this.treeRightClick}
 								/>
 							</Panel>
 							<Panel
@@ -120,12 +121,10 @@ class Directory extends React.Component {
 								key="2"
 								className={this.state.activePanel.includes("2") ? "panel-active" : ""}
 							>
-								<Search style={{ marginBottom: 8 }} placeholder="Search" />
+								<Search style={{ marginBottom: 8 }} placeholder="输入关键字搜索" />
 								<Tree
-									checkable
 									defaultExpandedKeys={["0-0-0", "0-0-1", "0-0-2"]}
 									onSelect={this.onSelect}
-									onCheck={this.onCheck}
 									treeData={this.state.treeData}
 								/>
 							</Panel>
@@ -135,12 +134,10 @@ class Directory extends React.Component {
 								key="3"
 								className={this.state.activePanel.includes("3") ? "panel-active" : ""}
 							>
-								<Search style={{ marginBottom: 8 }} placeholder="Search" />
+								<Search style={{ marginBottom: 8 }} placeholder="输入关键字搜索" />
 								<Tree
-									checkable
 									defaultExpandedKeys={["0-0-0", "0-0-1", "0-0-2"]}
 									onSelect={this.onSelect}
-									onCheck={this.onCheck}
 									treeData={this.state.treeData}
 								/>
 							</Panel>
@@ -150,12 +147,10 @@ class Directory extends React.Component {
 								key="4"
 								className={this.state.activePanel.includes("4") ? "panel-active" : ""}
 							>
-								<Search style={{ marginBottom: 8 }} placeholder="Search" />
+								<Search style={{ marginBottom: 8 }} placeholder="输入关键字搜索" />
 								<Tree
-									checkable
 									defaultExpandedKeys={["0-0-0", "0-0-1", "0-0-2"]}
 									onSelect={this.onSelect}
-									onCheck={this.onCheck}
 									treeData={this.state.treeData}
 								/>
 							</Panel>
