@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import { Avatar, Tooltip } from "antd";
-import { DesktopOutlined, BookOutlined, HddOutlined, CommentOutlined, TeamOutlined } from "@ant-design/icons";
+import { FileSearchOutlined, BookOutlined, HddOutlined, CommentOutlined, TeamOutlined } from "@ant-design/icons";
 import AmeScrollbars from "@/compontents/AmeScrollbars.jsx";
 class SideBar extends React.Component {
 	//  状态的初始化一般放在构造器中
@@ -10,23 +10,30 @@ class SideBar extends React.Component {
 		const appName = "ame";
 		this.state = {
 			menus: [
-				{ name: "首页", icon: <DesktopOutlined />, path: `/${appName}/dashboard` },
-				{ name: "备忘录", icon: <BookOutlined />, path: `/${appName}/memo` },
-				{ name: "项目", icon: <HddOutlined />, path: `/${appName}/project` },
-				{ name: "聊天", icon: <CommentOutlined />, path: `/${appName}/chat` },
-				{ name: "用户", icon: <TeamOutlined />, path: `/${appName}/users` },
+				{ id: "dashboard", name: "文件", icon: <FileSearchOutlined />, path: `/${appName}/dashboard` },
+				{ id: "memo", name: "备忘录", icon: <BookOutlined />, path: `/${appName}/memo` },
+				{ id: "project", name: "项目", icon: <HddOutlined />, path: `/${appName}/project` },
+				{ id: "chat", name: "聊天", icon: <CommentOutlined />, path: `/${appName}/chat` },
+				{ id: "users", name: "用户", icon: <TeamOutlined />, path: `/${appName}/users` },
 			],
-			activeMenu: "首页",
+			activeMenu: "dashboard",
 		};
 	}
+	componentDidMount() {
+		console.log(this.props.location.pathname);
+		const currentPath = this.props.location.pathname;
+		this.setState({
+			activeMenu: currentPath.split("/")[2],
+		});
+	}
 	handleMenuClick = (active) => {
-		const { name, path } = active;
+		const { id, path } = active;
 		const pathname = path;
 		this.props.history.push({
 			pathname,
 		});
 		this.setState({
-			activeMenu: name,
+			activeMenu: id,
 		});
 	};
 
@@ -53,7 +60,7 @@ class SideBar extends React.Component {
 							<div
 								key={index}
 								className={
-									this.state.activeMenu === data.name ? "ame-menu-item menu-actived" : "ame-menu-item"
+									this.state.activeMenu === data.id ? "ame-menu-item menu-actived" : "ame-menu-item"
 								}
 								onClick={(e) => this.handleMenuClick(data, e)}
 							>

@@ -1,9 +1,9 @@
 import React from "react";
 import { PlusOutlined, SearchOutlined } from "@ant-design/icons";
 import AmeScrollbars from "@/compontents/AmeScrollbars.jsx";
-import { Tree, Button } from "antd";
+import { Tree, Button, Input, Collapse } from "antd";
 
-import { Collapse } from "antd";
+const { Search } = Input;
 
 const { Panel } = Collapse;
 
@@ -105,6 +105,7 @@ class Directory extends React.Component {
 								key="1"
 								className={this.state.activePanel.includes("1") ? "panel-active" : ""}
 							>
+								<Search style={{ marginBottom: 8 }} placeholder="Search" />
 								<Tree
 									checkable
 									defaultExpandedKeys={["0-0-0", "0-0-1", "0-0-2"]}
@@ -119,6 +120,7 @@ class Directory extends React.Component {
 								key="2"
 								className={this.state.activePanel.includes("2") ? "panel-active" : ""}
 							>
+								<Search style={{ marginBottom: 8 }} placeholder="Search" />
 								<Tree
 									checkable
 									defaultExpandedKeys={["0-0-0", "0-0-1", "0-0-2"]}
@@ -133,6 +135,7 @@ class Directory extends React.Component {
 								key="3"
 								className={this.state.activePanel.includes("3") ? "panel-active" : ""}
 							>
+								<Search style={{ marginBottom: 8 }} placeholder="Search" />
 								<Tree
 									checkable
 									defaultExpandedKeys={["0-0-0", "0-0-1", "0-0-2"]}
@@ -147,6 +150,7 @@ class Directory extends React.Component {
 								key="4"
 								className={this.state.activePanel.includes("4") ? "panel-active" : ""}
 							>
+								<Search style={{ marginBottom: 8 }} placeholder="Search" />
 								<Tree
 									checkable
 									defaultExpandedKeys={["0-0-0", "0-0-1", "0-0-2"]}

@@ -1,6 +1,5 @@
 import React from "react";
 import { Row, Col } from "antd";
-import Directory from "./modules/Directory";
 import Project from "./modules/Project";
 import "./project.scss";
 
@@ -14,14 +13,11 @@ export default class Dashboard extends React.Component {
 		return (
 			<div className="ame-dashboard">
 				<Row gutter={16} className="dashboard-row">
-					<Col span={6}>
-						<Directory />
-					</Col>
-					<Col span={12}>
-						<Project />
-					</Col>
-					<Col span={6}>
+					<Col xs={12} sm={12} md={10} lg={8} xl={6}>
 						<Statistics />
+					</Col>
+					<Col xs={12} sm={12} md={14} lg={16} xl={18}>
+						<Project />
 					</Col>
 				</Row>
 			</div>

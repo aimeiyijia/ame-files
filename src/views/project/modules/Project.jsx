@@ -7,8 +7,6 @@ import {
 	AntDesignOutlined,
 	TwitterOutlined,
 	YoutubeOutlined,
-	FacebookOutlined,
-	LinkedinOutlined,
 	MoreOutlined,
 } from "@ant-design/icons";
 
@@ -224,33 +222,6 @@ class Project extends React.Component {
 								</div>
 							</Col>
 						</Row>
-					</AmeScrollbars>
-				</div>
-				<div className="recent">
-					<div className="title">最近操作</div>
-					<AmeScrollbars className="ame-scrollbar-lists">
-						<List
-							itemLayout="horizontal"
-							dataSource={data}
-							renderItem={(item) => (
-								<List.Item
-									actions={[
-										<a key="list-loadmore-more">
-											<MoreOutlined rotate={90} />
-										</a>,
-									]}
-								>
-									<List.Item.Meta
-										avatar={
-											<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-										}
-										title={<a href="https://ant.design">{item.title}</a>}
-										description="某项目某文件"
-									/>
-									<div>日期</div>
-								</List.Item>
-							)}
-						/>
 					</AmeScrollbars>
 				</div>
 			</div>

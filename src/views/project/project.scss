@@ -3,6 +3,9 @@
 	.dashboard-row {
 		width: 100%;
 		height: 100%;
+		& > .ant-col:nth-child(2) {
+			background-color: #f7f8fc;
+		}
 	}
 }
 .ame-directory,
@@ -17,45 +20,8 @@
 	color: #364064;
 	padding: 2px 0;
 }
-.ame-directory {
-	padding-left: 24px;
-	padding-right: 24px;
-
-	.navigation {
-		height: 90px;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-	.files {
-		padding-top: 12px;
-		height: calc(100% - 148px);
-		.ame-scrollbar-files {
-			height: calc(100% - 32px) !important;
-		}
-	}
-	.ant-collapse-borderless {
-		background-color: transparent;
-	}
-
-	[data-theme="compact"] .site-collapse-custom-collapse .site-collapse-custom-panel,
-	.site-collapse-custom-collapse .site-collapse-custom-panel {
-		border: 0px;
-	}
-
-	.ant-collapse-content > .ant-collapse-content-box {
-		padding-left: 20px;
-	}
-	.panel-active {
-		.ant-collapse-header {
-			color: #5862fa !important;
-		}
-	}
-}
 
 .ame-project {
-	background-color: #f7f8fc;
 	padding: 20px 16px;
 	.search {
 		.anticon-search {
@@ -67,9 +33,9 @@
 		margin-top: 8px;
 	}
 	.project-view {
-		height: calc(100% - 242px);
+		height: calc(100% - 48px);
 		.ame-scrollbar-view {
-			height: calc(100% - 30px) !important;
+			height: calc(100% - 32px) !important;
 		}
 		.ant-row {
 			margin-top: 8px;
@@ -96,13 +62,5 @@
 	}
 	.project-tags {
 		margin: 12px 0;
-	}
-	.recent {
-		height: 182px;
-		.ame-scrollbar-lists {
-			margin-top: 8px;
-			height: calc(100% - 36px) !important;
-			background-color: #fff;
-		}
 	}
 }
