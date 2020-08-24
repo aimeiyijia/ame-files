@@ -1,5 +1,5 @@
 import React from "react";
-import { Input, Row, Col, Avatar, Tooltip, Progress, Tag, List, Statistic } from "antd";
+import { Input, Row, Col, Avatar, Tooltip, Progress, Tag, Select, Statistic, Form, Button } from "antd";
 import AmeScrollbars from "@/compontents/AmeScrollbars.jsx";
 import {
 	SearchOutlined,
@@ -11,6 +11,8 @@ import {
 } from "@ant-design/icons";
 
 const { Countdown } = Statistic;
+const FormItem = Form.Item;
+const Option = Select.Option;
 const deadline = Date.now() + 1000 * 60 * 60 * 24 * 2 + 1000 * 30;
 
 const data = [
@@ -41,10 +43,9 @@ class Project extends React.Component {
 					<Input size="large" placeholder="搜索关键字" prefix={<SearchOutlined />} />
 				</div>
 				<div className="project-view">
-					<div className="title">项目预览</div>
 					<AmeScrollbars className="ame-scrollbar-view">
 						<Row gutter={16}>
-							<Col xs={2} sm={4} md={6} lg={8} xl={12}>
+							<Col xs={12} sm={12} md={12} lg={8} xl={6}>
 								<div className="single-project">
 									<div className="desc">
 										<div className="project-name">项目名称</div>
@@ -68,10 +69,10 @@ class Project extends React.Component {
 									</div>
 									<div className="project-tags">
 										<Tag icon={<TwitterOutlined />} color="#55acee">
-											Twitter
+											负责人
 										</Tag>
 										<Tag icon={<YoutubeOutlined />} color="#cd201f">
-											Youtube
+											项目状态
 										</Tag>
 									</div>
 									<Countdown title="Day Level" value={deadline} format="D 天 H 时 m 分 s 秒" />
@@ -88,7 +89,7 @@ class Project extends React.Component {
 									</div>
 								</div>
 							</Col>
-							<Col xs={2} sm={4} md={6} lg={8} xl={12}>
+							<Col xs={12} sm={12} md={12} lg={8} xl={6}>
 								<div className="single-project">
 									<div className="desc">
 										<div>项目名称</div>
@@ -131,9 +132,7 @@ class Project extends React.Component {
 									</div>
 								</div>
 							</Col>
-						</Row>
-						<Row gutter={16}>
-							<Col xs={2} sm={4} md={6} lg={8} xl={12}>
+							<Col xs={12} sm={12} md={12} lg={8} xl={6}>
 								<div className="single-project">
 									<div className="desc">
 										<div>项目名称</div>
@@ -164,7 +163,6 @@ class Project extends React.Component {
 										</Tag>
 									</div>
 									<Countdown title="Day Level" value={deadline} format="D 天 H 时 m 分 s 秒" />
-
 									<div className="progress">
 										<Progress
 											strokeColor={{
@@ -177,7 +175,7 @@ class Project extends React.Component {
 									</div>
 								</div>
 							</Col>
-							<Col xs={2} sm={4} md={6} lg={8} xl={12}>
+							<Col xs={12} sm={12} md={12} lg={8} xl={6}>
 								<div className="single-project">
 									<div className="desc">
 										<div>项目名称</div>
@@ -208,7 +206,6 @@ class Project extends React.Component {
 										</Tag>
 									</div>
 									<Countdown title="Day Level" value={deadline} format="D 天 H 时 m 分 s 秒" />
-
 									<div className="progress">
 										<Progress
 											strokeColor={{

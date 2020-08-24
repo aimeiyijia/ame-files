@@ -23,17 +23,9 @@
 .ame-directory {
 	padding-left: 16px;
 	padding-right: 12px;
-
-	.navigation {
-		height: 90px;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
 	.files {
 		padding-top: 12px;
-		height: calc(100% - 148px);
+		height: calc(100% - 58px);
 		.ame-scrollbar-files {
 			height: calc(100% - 42px) !important;
 		}

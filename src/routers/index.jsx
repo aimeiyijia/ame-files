@@ -1,6 +1,6 @@
 import Layout from "@/layout/index.jsx";
 import Files from "@/views/files/index";
-import Project from "@/views/project/project";
+import Project from "@/views/project/index";
 
 const routes = [
 	{

@@ -8,9 +8,7 @@
 		}
 	}
 }
-.ame-directory,
-.ame-project,
-.ame-statistics {
+.ame-project {
 	height: 100%;
 	// border: 1px solid red;
 }
@@ -24,20 +22,15 @@
 .ame-project {
 	padding: 20px 16px;
 	.search {
+		padding-bottom: 20px;
 		.anticon-search {
 			color: #5462fc;
 		}
 	}
-	.project-view,
-	.recent {
-		margin-top: 8px;
-	}
 	.project-view {
 		height: calc(100% - 48px);
-		.ame-scrollbar-view {
-			height: calc(100% - 32px) !important;
-		}
-		.ant-row {
+		background-color: #f7f8fc;
+		.ant-col {
 			margin-top: 8px;
 			margin-bottom: 8px;
 		}

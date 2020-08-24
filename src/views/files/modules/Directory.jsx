@@ -86,10 +86,6 @@ class Directory extends React.Component {
 	render() {
 		return (
 			<div className="ame-directory">
-				<div className="navigation">
-					<div className="title">Dashboard 工作台</div>
-					<div>120个任务</div>
-				</div>
 				<div className="files">
 					<div className="title">Storage 文件库</div>
 					<AmeScrollbars className="ame-scrollbar-files">
