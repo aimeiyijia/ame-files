@@ -1,5 +1,5 @@
 import React from "react";
-import { Input, Row, Col, Avatar, Tooltip, Progress, Tag, Select, Statistic, Form, Button } from "antd";
+import { Input, Row, Col, Avatar, Tooltip, Progress, Tag, Select, Statistic, Form, Pagination } from "antd";
 import AmeScrollbars from "@/compontents/AmeScrollbars.jsx";
 import {
 	SearchOutlined,
@@ -35,6 +35,9 @@ const data = [
 		title: "增加",
 	},
 ];
+function onChange(pageNumber) {
+	console.log("Page: ", pageNumber);
+}
 class Project extends React.Component {
 	render() {
 		return (
@@ -220,6 +223,7 @@ class Project extends React.Component {
 							</Col>
 						</Row>
 					</AmeScrollbars>
+					<Pagination showQuickJumper defaultCurrent={2} total={500} onChange={onChange} />
 				</div>
 			</div>
 		);
