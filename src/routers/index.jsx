@@ -1,6 +1,7 @@
 import Layout from "@/layout/index.jsx";
 import Files from "@/views/files/index";
-import Project from "@/views/project/index";
+import Projects from "@/views/project/index";
+import Users from "@/views/users/index";
 
 const routes = [
 	{
@@ -8,7 +9,8 @@ const routes = [
 		component: Layout,
 		routes: [
 			{ path: "/ame/files", component: Files },
-			{ path: "/ame/project", component: Project },
+			{ path: "/ame/project", component: Projects },
+			{ path: "/ame/users", component: Users },
 		],
 	},
 ];
