@@ -29,7 +29,7 @@ body,
 		text-align: center;
 		.ame-menu-item {
 			background-color: transparent;
-			border-left: 4px solid #6a73ff;
+			border-left: 4px solid #5764FF;
 			padding: 12px 0;
 			margin: 6px 0;
 			cursor: pointer;
@@ -39,6 +39,7 @@ body,
 			}
 			&:hover {
 				background-color: #6a73ff;
+				border-color: #6a73ff;
 			}
 		}
 		.menu-actived {
