@@ -4720,6 +4720,21 @@ file-uri-to-path@1.0.0:
   resolved "https://registry.yarnpkg.com/file-uri-to-path/-/file-uri-to-path-1.0.0.tgz#553a7b8446ff6f684359c445f1e37a05dacc33dd"
   integrity sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==
 
+filepond-plugin-image-exif-orientation@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.npm.taobao.org/filepond-plugin-image-exif-orientation/download/filepond-plugin-image-exif-orientation-1.0.9.tgz#bf1220d99c117a69859f3297d0618e7469705019"
+  integrity sha1-vxIg2ZwRemmFnzKX0GGOdGlwUBk=
+
+filepond-plugin-image-preview@^4.6.4:
+  version "4.6.4"
+  resolved "https://registry.npm.taobao.org/filepond-plugin-image-preview/download/filepond-plugin-image-preview-4.6.4.tgz#19edade651559cf8c9fb97bcc8ce56af16ebae67"
+  integrity sha1-Ge2t5lFVnPjJ+5e8yM5Wrxbrrmc=
+
+filepond@^4.25.1:
+  version "4.25.1"
+  resolved "https://registry.npm.taobao.org/filepond/download/filepond-4.25.1.tgz#426e7cce3d0cdccb2d5623bedc5a8db772ae167b"
+  integrity sha1-Qm58zj0M3MstViO+3FqNt3KuFns=
+
 filesize@6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/filesize/-/filesize-6.0.1.tgz#f850b509909c7c86f7e450ea19006c31c2ed3d2f"
@@ -9515,6 +9530,11 @@ react-error-overlay@^6.0.7:
   version "6.0.7"
   resolved "https://registry.npm.taobao.org/react-error-overlay/download/react-error-overlay-6.0.7.tgz?cache=0&sync_timestamp=1596648914602&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-error-overlay%2Fdownload%2Freact-error-overlay-6.0.7.tgz#1dcfb459ab671d53f660a991513cb2f0a0553108"
   integrity sha1-Hc+0WatnHVP2YKmRUTyy8KBVMQg=
+
+react-filepond@^7.1.0:
+  version "7.1.0"
+  resolved "https://registry.npm.taobao.org/react-filepond/download/react-filepond-7.1.0.tgz#e3a83321dcfcd9c55f9f7d97ca1042f6d4412e66"
+  integrity sha1-46gzIdz82cVfn32XyhBC9tRBLmY=
 
 react-is@^16.12.0, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4:
   version "16.13.1"
