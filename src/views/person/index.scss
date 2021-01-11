@@ -27,9 +27,19 @@
     position: absolute;
     top: -50px;
     right: 40px;
+    padding: 24px 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .login_name,
+    .ant-form {
+      width: 100%;
+    }
     .login_name {
+      margin-bottom: 42px;
       text-align: center;
-      color:  #5764FF;
+      color: #5764ff;
       font-size: 30px;
     }
     .ant-input-affix-wrapper {
