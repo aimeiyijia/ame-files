@@ -1,11 +1,3 @@
-/*
- * @Author: your name
- * @Date: 2020-08-19 21:23:03
- * @LastEditTime: 2021-01-02 16:11:34
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \ame-files\src\index.js
- */
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { renderRoutes } from 'react-router-config'
